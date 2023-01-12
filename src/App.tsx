@@ -1,6 +1,7 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import { Counter } from "./Counter";
+import { GlobalCounter } from "./GlobalCounter";
 
 function App() {
   return (
@@ -18,6 +19,18 @@ function App() {
         >
           Learn React
         </a>
+        <div style={{ display: "flex", justifyContent: "space-between" }}>
+          <div style={{ padding: "10px" }}>
+            <p>local state</p>
+            <Counter />
+            <Counter />
+          </div>
+          <div style={{ padding: "10px" }}>
+            <p>global state</p>
+            <GlobalCounter />
+            <GlobalCounter />
+          </div>
+        </div>
       </header>
     </div>
   );
